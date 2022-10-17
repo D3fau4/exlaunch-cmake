@@ -5,14 +5,12 @@ extern "C" {
 #endif
 
 #include "result.h"
-#include "smc.h"
 #include "types.h"
+#include "smc.h"
 
 #include "arm/cache.h"
 #include "arm/tls.h"
 
-#include "kernel/detect.h"
-#include "kernel/jit.h"
 #include "kernel/svc.h"
 #include "kernel/virtmem.h"
 
