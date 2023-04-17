@@ -1,7 +1,7 @@
 #pragma once
 
 #include <common.hpp>
-#include "util/modules.hpp"
+#include "modules.hpp"
 
 namespace exl::util::pointer_path {
     
@@ -66,7 +66,7 @@ namespace exl::util::pointer_path {
         return FollowSafe<Offsets...>(reinterpret_cast<uintptr_t>(ptr));
     }
     template<uintptr_t... Offsets>
-    inline uintptr_t FollowPath(void const* ptr) {
+    inline uintptr_t Follow(void const* ptr) {
         return Follow<Offsets...>(reinterpret_cast<uintptr_t>(ptr));
     }
 

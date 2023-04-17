@@ -1,6 +1,6 @@
 #include "mem_layout.hpp"
 
-#include <reloc/rtld.hpp>
+#include "../../reloc/rtld.hpp"
 #include <program/setting.hpp>
     
 /* Provided by linkerscript, the start of our executable. */
@@ -124,7 +124,7 @@ namespace exl::util {
 
     static uintptr_t GetAddressFromInfo(InfoType type) {
         uintptr_t addr;
-        EXL_ASSERT(R_SUCCEEDED(TryGetAddressFromInfo(type, &addr)));
+        R_ABORT_UNLESS(TryGetAddressFromInfo(type, &addr));
         return addr;
     }
 

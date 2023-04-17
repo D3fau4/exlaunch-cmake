@@ -7,7 +7,7 @@ if (NOT SWITCH)
 endif()
 
 set(CMAKE_C_STANDARD 17)
-set(CMAKE_CXX_STANDARD 2b)
+set(CMAKE_CXX_STANDARD 20)
 enable_language(ASM C CXX)
 
 ## Title Id
